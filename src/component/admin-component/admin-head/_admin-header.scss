@@ -1,0 +1,28 @@
+// @import url('https://fonts.googleapis.com/css?family=Lato');
+@import "../../../style/_main.scss";
+
+.store-logo {
+  width: 100px;
+  margin-left: 50px;
+  display: inline-block;
+}
+
+.fa {
+  width: auto;
+}
+
+.navigation {
+  width: 30%;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+}
+.navigation-menu li{
+  list-style-type: none;
+  display: inline-block;
+  width: auto;
+  border-left: 1px solid $color-lightgrey;
+  padding-left: 10px;
+  font-family: $font-main;
+  cursor: pointer;
+}
