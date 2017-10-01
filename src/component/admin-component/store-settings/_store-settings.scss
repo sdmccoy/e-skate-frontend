@@ -1,0 +1,28 @@
+.form-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin-logo {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-container input {
+  border-radius: 10px;
+}
+.form-container textarea {
+  border-radius: 10px;
+}
+.form-container button {
+  border-radius: 10px;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #5bc0de;
+}
+.form-container button:hover {
+  background: #4cb0ce;
+}

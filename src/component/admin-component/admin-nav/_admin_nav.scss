@@ -1,0 +1,14 @@
+@import "../../../style/_main.scss";
+
+.admin-nav {
+  border: 1px solid black;
+  height: 55px;
+}
+
+.admin-nav-button {
+  display: inline-block;
+  width: 250px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}

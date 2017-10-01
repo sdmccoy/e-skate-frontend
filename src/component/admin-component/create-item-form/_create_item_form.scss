@@ -1,0 +1,26 @@
+.create-item-form {
+  width: 90%;
+  margin: 25px auto;
+  h1 {
+    text-align: center;
+  }
+
+  form input {
+    margin-bottom: 25px;
+  }
+
+  .button-container {
+    width: 220px;
+    height: 25%;
+    display: block;
+    margin: auto;
+
+    button {
+      width: 100px;
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 8px;
+      cursor: pointer;
+    }
+  }
+}
