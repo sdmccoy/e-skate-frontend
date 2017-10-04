@@ -10,16 +10,17 @@ class Header extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      headerLogo: 'https://s3-us-west-2.amazonaws.com/eskate/logo-400x400.png',
       itemName:'',
       itemCount: '',
-      itemTotal: 100.00,
+      itemTotal: 0.00,
       showCart: false,
     };
     this.handleCartModal = this.handleCartModal.bind(this);
   }
 
   componentWillMount() {
-    this.props.storeSettingsFetch();
+    // this.props.storeSettingsFetch();
   }
 
   componentWillReceiveProps(props){
@@ -43,7 +44,7 @@ class Header extends React.Component {
       <div className='frontend-header'>
         <img
           className='store-logo'
-          src={this.props.header.storeLogoURI}
+          src={this.state.headerLogo}
         />
         <div className='cart-button'>
           <button type='button'

@@ -7,7 +7,7 @@ const ExtractPlugin = require('extract-text-webpack-plugin');
 const { DefinePlugin, EnvironmentPlugin } = require('webpack');
 
 const production = process.env.NODE_ENV === 'production';
-console.log('prod = ', production);
+
 let plugins = [
   new EnvironmentPlugin(['NODE_ENV']),
   new ExtractPlugin('bundle-[hash].css'),

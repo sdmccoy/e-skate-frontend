@@ -12,9 +12,9 @@ export const userLogout = () => ({
   payload: null,
 });
 
-export const userLoginRequest = user => dispatch =>
+export const userLoginRequest = user => dispatch => {
   //eslint-disable-next-line
-  superagent.get(`${__API_URL__}/admin/login`)
+  return superagent.get(`${__API_URL__}/admin/login`)
     .withCredentials()
     .auth(user.username, user.password)
     .then((res) => {
@@ -22,6 +22,7 @@ export const userLoginRequest = user => dispatch =>
       if (token) dispatch(userLogin(token));
       return res;
     });
+};
 
 export const userLogoutRequest = () => (dispatch) => {
   cookieDelete('Admin-Token');

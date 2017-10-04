@@ -7,16 +7,38 @@ export const storeSet = (storesettings) => ({
   payload: storesettings,
 });
 
+export const storeSettingsSetRequest = (settings) => (dispatch, getState) => {
+  //auth the user
+  let {user} = getState();
+  let photo = settings.storeLogoURI;
+  delete settings.storeLogoURI;
+
+  return superagent.post(`${__API_URL__}/store`)
+    .set('Authorization', `Bearer ${user}`)
+    .field('phoneNumber', settings.storePhoneNumber)
+    .field('address', settings.storeAddress)
+    .field('city', settings.storeCity)
+    .field('state', settings.storeState)
+    .field('zipCode', settings.storeZipCode)
+    .field('aboutUs', settings.storeAboutUs)
+    .attach('file', photo)
+    .then((res) => {
+      console.log('store post res: ', res);
+    });
+};
 
 export const storeSettingsFetchRequest = () => (dispatch) => {
   return superagent.get(`${__API_URL__}/store`)
     .then((res) => {
+      console.log('res store: ', res.body.length);
       dispatch(storeSet(res.body[0]));
       return res;
     });
 };
 
 export const storeSettingsUpdateRequest = (settings) => (dispatch, getState) => {
+  console.log('hit store update');
+  console.log('settings: ', settings);
   let {user} = getState();
   return superagent.put(`${__API_URL__}/store/${settings._id}`)
     .field('phoneNumber', settings.storePhoneNumber)

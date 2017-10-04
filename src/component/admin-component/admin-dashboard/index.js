@@ -18,7 +18,6 @@ class AdminDashboard extends React.Component {
   }
 
   componentWillMount() {
-    this.props.storeSettingsFetch();
     this.props.fetchItems();
     const token = util.cookieFetch('Admin-Token');
     token && this.props.restoreLogin(token);
