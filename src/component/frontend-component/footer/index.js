@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as querystring from 'querystring';
+import * as storeActions from '../../../action/store-actions';
 import './_footer.scss';
 
 class Footer extends React.Component {
@@ -25,8 +26,6 @@ class Footer extends React.Component {
               </li>
               <li className='footer-social-icon'><a href='#' title="skate tweets"><i className="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
               </li>
-              <li className='footer-social-icon'><a href='#' title="skate on pinterest"><i className="fa fa-pinterest-square fa-2x" aria-hidden="true"></i></a>
-              </li>
               <li className='footer-social-icon'><a href='#' title="skate on instagram"><i className="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
               </li>
               <li className='footer-social-icon'><a href='#' title="videos by skate"><i className="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a>
@@ -34,7 +33,7 @@ class Footer extends React.Component {
             </ul>
           </div>
           <div className='footer-column-contact'>
-            <h3>Where we are located?</h3>
+            <h3>Location</h3>
             <div className='google-maps'>
               <iframe
                 src={googleLoginURL}>
