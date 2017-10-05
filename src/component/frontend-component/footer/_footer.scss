@@ -1,68 +1,87 @@
-@import "../../../style/_main.scss";
+@import "../../../style/_vars.scss";
 
 .clear-float {
   clear: both;
 }
 
 .frontend-footer {
-  margin-top: 15px;
   height: 10%;
-  border: 1px solid #ccc;
-  box-shadow: 1px 1px 8px 1px #ccc;
-}
-.footer-container {
-  width: 80%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer-column-social {
-  margin-top: 15px;
-  position: relative;
-  width: calc(100%/2);
-  height: 100%;
-  float: left;
 
 }
-.footer-column-contact {
-  margin-top: 15px;
-  position: relative;
-  width: calc(100%/2);
+
+.footer-container {
   height: 100%;
-  float: right;
+
+  .footer-column-social, .footer-column-contact {
+    margin: $pad 0;
+
+    h3 {
+      background-color: $color-primary;
+      color: $color-font;
+    }
+  }
+
+  .footer-column-social {
+    height: calc(100%/2);
+
+    ul li {
+      padding: $pad 0 0 0;
+      width: 25%;
+      text-align: center;
+    }
+  }
+
+  .footer-column-contact {
+    height: calc(100%/2);
+
+    .google-maps {
+      padding: $pad 0 0 0;
+    }
+
+    .footer-address {
+      font-size: 2em;
+    }
+
+  }
 }
-h3 {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-.footer-social {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer-social-icon {
-  // order: 1px solid black;
-  display: inline-block;
-  list-style: none;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 10%;
-}
-.google-maps {
-  width: 200px;
-  height: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer-address {
-  width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer-address-info {
-  margin-left: 10px;
-  display: inline-block;
-  margin-bottom: 10px;
-  width: auto;
+
+@media only screen and (min-width: 650px) {
+  .footer-container {
+    height: 100%;
+
+    .footer-column-social, .footer-column-contact {
+      margin: $pad 0;
+
+      h3 {
+        text-align: center;
+        background-color: $color-primary;
+        color: $color-font;
+      }
+    }
+
+    .footer-column-social {
+      height: calc(100%/1);
+      width: calc(100%/2);
+
+      ul li {
+        padding: $pad*2 0 0 0;
+        font-size: 2em;
+        width: 25%;
+        text-align: center;
+      }
+    }
+
+    .footer-column-contact {
+      height: calc(100%/1);
+      width: calc(100%/2);
+
+      .google-maps {
+        padding: $pad 0 0 0;
+      }
+
+      .footer-address {
+        font-size: 2em;
+      }
+    }
+  }
 }

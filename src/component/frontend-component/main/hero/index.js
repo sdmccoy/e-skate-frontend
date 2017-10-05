@@ -6,7 +6,7 @@ class Hero extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      photoURI: 'https://s3-us-west-2.amazonaws.com/eskate/2017-new-theme-raptor-2.jpg',
+      photoURI: 'https://s3-us-west-2.amazonaws.com/eskate/hero.jpeg',
     };
   }
 

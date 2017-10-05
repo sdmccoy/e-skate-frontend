@@ -1,40 +1,120 @@
-@import "../../../../style/_main.scss";
+@import "../../../../style/_vars.scss";
 
 .clear-float {
   clear: both;
 }
 
-.part-items-container * {
+.part-items-container {
   width: 100%;
   height: 40%;
 
-}
-.app-bar {
-  z-index: 0!important;
-  margin-top: $pad*4 !important;
-  margin-bottom: $pad !important;
+  button {
+    border-radius: 0;
+  }
+
+  .app-bar {
+    margin: $pad 0;
+    background-color: $color-primary;
+    font-size: 3em;
+    color: $color-font;
+    box-shadow: inset 0 0 2em $color-tertriary;
+  }
+
 }
 
 .card-item {
-  width: calc(90%/4) !important;
-  height: calc(100%) !important;
-  float: left !important;
-  margin-left: calc(10%/8) !important;
-  margin-right: calc(10%/8) !important;
-  margin-top: $pad*4 !important;
-  box-shadow: rgba(0, 0, 0, 0.12) 10px 5px 11px, rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+  width: calc(90%);
+  height: calc(100%);
+  float: left;
+  margin: calc(10%/2);
+  box-shadow: rgba(0, 0, 0, 0.12) 10px 10px 11px, rgba(0, 0, 0, 0.12) 0px 1px 4px ;
 
-  .card-header {
-    height: 90% !important;
+  .card-image-container {
+    box-shadow: 0 0 .5em $color-lightgrey;
+  }
 
-    .card-image {
-      width: 1em !important;
-      height: 18em !important;
+  .card-title-bar {
+    text-align: center;
+  }
+  .card-view-button {
+    height: 2em ;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .part-items-container {
+    width: 100%;
+    height: 40%;
+
+    button {
+      border-radius: 0;
+    }
+
+    .app-bar {
+      margin: $pad 0;
+      background-color: $color-primary;
+      font-size: 3em;
+      color: $color-font;
+      box-shadow: inset 0 0 2em $color-tertriary;
     }
 
   }
 
-  .card-view-button {
-    height: 2em !important;
+  .card-item {
+    width: calc(90%/2);
+    height: calc(100%);
+    float: left;
+    margin: calc(10%/4);
+    box-shadow: rgba(0, 0, 0, 0.12) 10px 10px 11px, rgba(0, 0, 0, 0.12) 0px 1px 4px ;
+
+    .card-image-container {
+      box-shadow: 0 0 .5em $color-lightgrey;
+    }
+
+    .card-title-bar {
+      text-align: center;
+    }
+    .card-view-button {
+      height: 2em ;
+    }
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .part-items-container {
+    width: 100%;
+    height: 40%;
+
+    button {
+      border-radius: 0;
+    }
+
+    .app-bar {
+      margin: $pad 0;
+      background-color: $color-primary;
+      font-size: 3em;
+      color: $color-font;
+      box-shadow: inset 0 0 2em $color-tertriary;
+    }
+
+  }
+
+  .card-item {
+    width: calc(90%/4);
+    height: calc(100%);
+    float: left;
+    margin: calc(10%/8);
+    box-shadow: rgba(0, 0, 0, 0.12) 10px 10px 11px, rgba(0, 0, 0, 0.12) 0px 1px 4px ;
+
+    .card-image-container {
+      box-shadow: 0 0 .5em $color-lightgrey;
+    }
+
+    .card-title-bar {
+      text-align: center;
+    }
+    .card-view-button {
+      height: 2em ;
+    }
   }
 }
