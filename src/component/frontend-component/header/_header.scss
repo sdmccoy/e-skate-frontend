@@ -39,4 +39,182 @@
   .cart-button button {
     padding: 0;
   }
+
+  @media only screen and (min-width: 650px){
+    .clear-float {
+      display: none;
+    }
+    .logo-container, .company-name, .cart-button, .navigation {
+      height: 100%;
+      text-align: center;
+    }
+
+    .logo-container  {
+      width: 10%;
+
+      img.store-logo {
+        width: 100%;
+      }
+    }
+
+    .company-name {
+      width: 30%;
+      text-align: left;
+      font-size: 3em;
+      font-style: italic;
+      font-family: $font-main;
+      color: $color-primary;
+    }
+
+    .navigation {
+      width: 30%;
+      height: 100%;
+
+      li {
+        width: 48%;
+        margin-right: 1%;
+        font-size: 1.5em;
+        border-right: 1px solid $color-border;
+        &:hover {
+          background-color: $color-hover;
+          border-radius: $pad;
+          a {
+            color: $color-font;
+          }
+        }
+      }
+    }
+
+    .cart-button {
+      width: 30%;
+
+      button {
+        padding: 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 960px){
+    .clear-float {
+      display: none;
+    }
+    .logo-container, .company-name, .cart-button, .navigation {
+      height: 100%;
+      text-align: center;
+    }
+
+    .logo-container  {
+      width: 10%;
+      height: 100%;
+      margin: auto;
+      padding: $pad;
+
+      img.store-logo {
+        width: 100%;
+      }
+    }
+
+    .company-name {
+      width: 30%;
+      height: 100%;
+      margin: auto;
+      padding: $pad;
+      text-align: left;
+      font-size: 3em;
+      font-style: italic;
+      font-family: $font-main;
+      color: $color-primary;
+    }
+
+    .navigation {
+      width: 30%;
+      height: 100%;
+      padding: $pad 0;
+
+      li {
+        width: 48%;
+        margin-right: 1%;
+        font-size: 1.5em;
+        border-right: 1px solid $color-border;
+        &:hover {
+          background-color: $color-hover;
+          border-radius: $pad;
+          a {
+            color: $color-font;
+          }
+        }
+      }
+    }
+
+    .cart-button {
+      width: 30%;
+      padding: $pad/2 0;
+
+      button {
+        padding: 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1080px){
+    .clear-float {
+      display: none;
+    }
+    .logo-container, .company-name, .cart-button, .navigation {
+      height: 100%;
+      text-align: center;
+    }
+
+    .logo-container  {
+      width: 10%;
+      height: 100%;
+      margin: auto;
+      padding: $pad;
+
+      img.store-logo {
+        width: 100%;
+      }
+    }
+
+    .company-name {
+      width: 30%;
+      height: 100%;
+      margin: auto;
+      padding: $pad;
+      text-align: left;
+      font-size: 4em;
+      font-style: italic;
+      font-family: $font-main;
+      color: $color-primary;
+    }
+
+    .navigation {
+      width: 30%;
+      height: 100%;
+      padding: $pad 0;
+
+      li {
+        width: 48%;
+        margin-right: 1%;
+        font-size: 1.5em;
+        border-right: 1px solid $color-border;
+        &:hover {
+          background-color: $color-hover;
+          border-radius: $pad;
+          a {
+            color: $color-font;
+          }
+        }
+      }
+    }
+
+    .cart-button {
+      width: 30%;
+      padding: $pad/2 0;
+
+      button {
+        padding: 0;
+      }
+    }
+  }
 }

@@ -51,14 +51,12 @@ class Header extends React.Component {
         <h1 className='company-name'>E-Skate</h1>
         <div className='clear-float'></div>
         <div className='navigation'>
-          <ul className='navigation-menu'>
-            <li>
-              <a href='#boards'>Boards</a>
-            </li>
-            <li>
-              <a href='#parts'>Parts</a>
-            </li>
-          </ul>
+          <li>
+            <a href='#boards'>Boards</a>
+          </li>
+          <li>
+            <a href='#parts'>Parts</a>
+          </li>
         </div>
         <div className='cart-button'>
           <button type='button'
