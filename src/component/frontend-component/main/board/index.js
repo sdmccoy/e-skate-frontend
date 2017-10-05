@@ -25,7 +25,7 @@ class BoardItems extends React.Component {
   render() {
     return (
       <div className='board-items-container' id='boards'>
-        <div className='app-bar'>Boards</div>
+        <div className='app-bar'>BOARDS</div>
         {this.props.items.map(item => {
           return item.type === 'board' ?
             <div className='card-item' key={item._id}>
