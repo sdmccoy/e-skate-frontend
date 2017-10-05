@@ -42,10 +42,24 @@ class Header extends React.Component {
     let {itemName, itemCount, itemTotal} = this.state;
     return (
       <div className='frontend-header'>
-        <img
-          className='store-logo'
-          src={this.state.headerLogo}
-        />
+        <div className='logo-container'>
+          <img
+            className='store-logo'
+            src={this.state.headerLogo}
+          />
+        </div>
+        <h1 className='company-name'>E-Skate</h1>
+        <div className='clear-float'></div>
+        <div className='navigation'>
+          <ul className='navigation-menu'>
+            <li>
+              <a href='#boards'>Boards</a>
+            </li>
+            <li>
+              <a href='#parts'>Parts</a>
+            </li>
+          </ul>
+        </div>
         <div className='cart-button'>
           <button type='button'
             onClick={this.handleCartModal}>
@@ -57,26 +71,6 @@ class Header extends React.Component {
             onComplete={this.handleCartModal}
           />
         )}
-        <div className='navigation'>
-          <ul className='navigation-menu'>
-            <li>
-              <a href='#boards'>
-                Boards
-              </a>
-            </li>
-            <li>
-              <a href='#parts'>
-                Parts
-              </a>
-            </li>
-            <li>
-              <a href='#'>
-              About Us
-              </a>
-            </li>
-            <li></li>
-          </ul>
-        </div>
       </div>
     );
   }

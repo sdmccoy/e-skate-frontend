@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
+//main colors
+$color-primary: #00BCD4;
+$color-secondary: #6AB9C1;
+$color-tertriary: #73AAA0;
+
+$color-button: #6AB9C1;
+$color-hover: #00BDC4;
+$color-active: #73AAA0;
+$color-font: #FFF;
+$color-border: #77797B;
+
 //form
 $color-button-add: #DDFF99;
 $color-button-add-border: #ccff66;
@@ -25,7 +36,7 @@ $completed-button-background: #a4f442;
 $color-white: #fff;
 $color-black: #000;
 $color-lightgrey: #e3e5e8;
-$color-grey: #7A7D84;
-$color-darkgrey: #6E7177;
+$color-grey: #00A9BE;
+$color-darkgrey: #77797B;
 
 $pad: 0.5em;

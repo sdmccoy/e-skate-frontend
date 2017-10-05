@@ -6,7 +6,6 @@ import Hero from './main/hero';
 import * as itemAction from '../../action/item-actions';
 import Header from './header';
 import Footer from './footer';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class MainView extends React.Component {
 
@@ -16,17 +15,15 @@ class MainView extends React.Component {
 
   render() {
     return (
-      <MuiThemeProvider>
-        <div>
-          <Header />
-          <main className='frontend-main'>
-            <Hero />
-            <BoardItems />
-            <PartItems />
-          </main>
-          <Footer />
-        </div>
-      </MuiThemeProvider>
+      <div>
+        <Header />
+        <main className='frontend-main'>
+          <Hero />
+          <BoardItems />
+          <PartItems />
+        </main>
+        <Footer />
+      </div>
     );
   }
 }

@@ -1,38 +1,42 @@
-// @import url('https://fonts.googleapis.com/css?family=Lato');
-@import "../../../style/_main.scss";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import "../../../style/_vars.scss";
 
 .frontend-header {
+  height: 20%;
 
-}
+  .logo-container, .company-name, .cart-button, .navigation {
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    // border: 1px solid yellow;
+  }
 
-.store-logo {
-  width: 100px;
-  margin-left: 50px;
-  display: inline-block;
-  position: static;
-}
-.cart-button {
-  display: inline-block;
-  width: 250px;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-.fa {
-  width: auto;
-}
-.navigation {
-  // border: 1px solid black;
-  width: 30%;
-  position: absolute;
-  right: 20px;
-  top: 80px;
-}
-.navigation-menu li{
-  list-style-type: none;
-  display: inline-block;
-  width: auto;
-  border-left: 1px solid $color-lightgrey;
-  padding-left: 10px;
-  font-family: $font-main;
+  .logo-container img.store-logo {
+    width: 20%;
+  }
+
+  h1 {
+    font-size: 2em;
+    color: $color-primary;
+    font-style: italic;
+    font-family: $font-main;
+  }
+
+  .navigation li {
+    width: 48%;
+    margin-right: 1%;
+    font-size: 1.5em;
+    border-right: 1px solid $color-border;
+    &:hover {
+      background-color: $color-hover;
+      border-radius: $pad;
+      a {
+        color: $color-font;
+      }
+    }
+  }
+
+  .cart-button button {
+    padding: 0;
+  }
 }
