@@ -9,6 +9,12 @@ class StoreSettings extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      phoneNumber: '',
+      address: '',
+      city: '',
+      state: '',
+      zipCode: '',
+      storeLogoURI: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,36 +28,40 @@ class StoreSettings extends React.Component {
   handleChange(e){
     let {type, name} = e.target;
 
-    if(name === 'phoneNumber'){
-      this.setState({storePhoneNumber: e.target.value});
-    }
-    if(name === 'address'){
-      this.setState({storeAddress: e.target.value});
-    }
-    if(name === 'city'){
-      this.setState({storeCity: e.target.value});
-    }
-    if(name === 'state'){
-      this.setState({storeState: e.target.value});
-    }
-    if(name === 'zipCode'){
-      this.setState({storeZipCode: e.target.value});
-    }
-    if(name === 'about-us'){
-      this.setState({storeAboutUs: e.target.value});
-    }
-    if(name === 'photoURI'){
-      let {files} = e.target;
-      let storeLogoURI = files[0];
-      //  this.setState({storeLogoURI});
+    // if(name === 'phoneNumber'){
+    //   this.setState({storePhoneNumber: e.target.value});
+    // }
+    // if(name === 'address'){
+    //   this.setState({storeAddress: e.target.value});
+    // }
+    // if(name === 'city'){
+    //   this.setState({storeCity: e.target.value});
+    // }
+    // if(name === 'state'){
+    //   this.setState({storeState: e.target.value});
+    // }
+    // if(name === 'zipCode'){
+    //   this.setState({storeZipCode: e.target.value});
+    // }
+    // if(name === 'about-us'){
+    //   this.setState({storeAboutUs: e.target.value});
+    // }
+
+    if(e.target.type === 'file'){
+      // let {files} = e.target;
+      let storeLogoURI = e.target.files[0];
       util.photoToDataURL(storeLogoURI)
-        .then(storeLogoURI => this.setState({storeLogoURI}))
+        .then(storeLogoData => {
+          this.setState({storeLogoURI: storeLogoData});
+        })
         .catch(console.error);
+    } else {
+      this.setState({[e.target.name]: e.target.value});
     }
   }
 
   componentWillMount(){
-    this.props.storeSettingsFetch();
+    // this.props.storeSettingsFetch();
   }
 
   componentWillReceiveProps(props){
@@ -123,7 +133,7 @@ class StoreSettings extends React.Component {
                 onChange={this.handleChange}
               >
               </textarea>
-              <button type='submit'> Update</button>
+              <button type='submit'> Update </button>
             </form>
           </div>
         </div>
@@ -138,7 +148,7 @@ let mapStateToProps = (state) => ({
 
 let mapDispatchToProps = (dispatch) => ({
   storeSettingsFetch: () => dispatch(storeActions.storeSettingsFetchRequest()),
-  storeSettingsUpdate: (data) => dispatch(storeActions.storeSettingsUpdateRequest(data)),
+  storeSettingsUpdate: (data) => dispatch(storeActions.storeUpdate(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(StoreSettings);

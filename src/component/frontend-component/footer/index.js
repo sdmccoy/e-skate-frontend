@@ -6,7 +6,13 @@ import './_footer.scss';
 
 class Footer extends React.Component {
   componentDidMount(){
+    console.log('footer props= ',this.props);
   }
+
+  componentWillReceiveProps(nextProps){
+    console.log('cwrp nextProps= ', nextProps);
+  }
+
   render() {
     let {storePhoneNumber, storeAddress, storeCity, storeState, storeZipCode} = this.props.header;
     let googleMapBaseURL='https://www.google.com/maps/embed/v1/place?';
@@ -52,9 +58,12 @@ class Footer extends React.Component {
 }
 
 
-let mapStateToProps = (state) => ({
-  header: state.store,
-});
+let mapStateToProps = (state) => {
+  console.log('mpstp = ', state);
+  return {
+    header: state.store,
+  };
+};
 
 let mapDispatchToProps = (dispatch) => ({
   storeSettingsFetch: () => dispatch(storeActions.storeSettingsFetchRequest()),
