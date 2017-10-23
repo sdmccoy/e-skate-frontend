@@ -5,7 +5,7 @@ import './_admin-header.scss';
 
 const AdminHead = props => (
   <div>
-    <img className='store-logo' src={props.header.storeLogoURI} alt="logo" />
+    <img className='store-logo-admin' src={'https://s3-us-west-2.amazonaws.com/eskate/logo-400x400.png'} alt="logo" />
     {props.user &&
       <AdminNav
         changeView={props.changeView}

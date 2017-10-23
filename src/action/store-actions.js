@@ -7,6 +7,11 @@ export const storeSet = (storesettings) => ({
   payload: storesettings,
 });
 
+export const storeUpdate = (storeSettings) => ({
+  type: 'STORE_UPDATE',
+  payload: storeSettings,
+});
+
 export const storeSettingsSetRequest = (settings) => (dispatch, getState) => {
   //auth the user
   let {user} = getState();

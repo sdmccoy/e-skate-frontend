@@ -33,13 +33,27 @@
 
   .footer-column-contact {
     height: calc(100%/2);
-
+    * {
+      float: left;
+      display: block;
+    }
     .google-maps {
-      padding: $pad 0 0 0;
+      width: 96%;
+      margin: 2%;
     }
 
     .footer-address {
-      font-size: 2em;
+      font-size: 1.5em;
+      i {
+        width: 10%;
+      }
+      p {
+        width: 80%;
+      }
+    }
+    a {
+      text-align: center;
+      font-size: .5em;
     }
 
   }
