@@ -5,20 +5,23 @@ import * as storeActions from '../../../action/store-actions';
 import './_footer.scss';
 
 class Footer extends React.Component {
-  componentDidMount(){
-    console.log('footer props= ',this.props);
-  }
-
-  componentWillReceiveProps(nextProps){
-    console.log('cwrp nextProps= ', nextProps);
+  constructor(props){
+    super(props);
+    this.state = {
+      storePhoneNumber: '(206) 987-1234',
+      storeAddress: '305 Harrison Street',
+      storeCity: 'Seattle',
+      storeState: 'WA',
+      storeZipCode: '98109',
+    };
   }
 
   render() {
-    let {storePhoneNumber, storeAddress, storeCity, storeState, storeZipCode} = this.props.header;
+    let {storePhoneNumber, storeAddress, storeCity, storeState, storeZipCode} = this.state;
     let googleMapBaseURL='https://www.google.com/maps/embed/v1/place?';
     let googleLoginQuery=querystring.stringify({
       key: 'AIzaSyA5ainXh6JtzUGidES-5hGh9IlkOrrpwpc',
-      q:`${this.props.header.storeAddress},${this.props.header.storeCity}+${this.props.header.storeState}`,
+      q:`${this.state.storeAddress},${this.state.storeCity}+${this.state.storeState}`,
       zoom:'14',
     });
     let googleLoginURL = `${googleMapBaseURL}${googleLoginQuery}`;
@@ -48,7 +51,11 @@ class Footer extends React.Component {
             <div className='footer-address'>
               <i className="fa fa-phone" aria-hidden="true"></i><p className='footer-address-info'>{storePhoneNumber}</p><br />
               <i className="fa fa-map-marker" aria-hidden="true"></i><p className='footer-address-info'>{storeAddress}</p><br />
-              <p className='footer-address-info'>&nbsp;&nbsp;{storeCity}, {storeState} {storeZipCode}</p>
+              <i style={{visibility: 'hidden'}} className="fa fa-map-marker" aria-hidden="true"></i>
+              <p className='footer-address-info'>{storeCity}, {storeState} {storeZipCode}</p>
+              <button>
+                <a href='/admin' target='_blank'>Admin Login</a>
+              </button>
             </div>
           </div>
         </div>
@@ -58,12 +65,9 @@ class Footer extends React.Component {
 }
 
 
-let mapStateToProps = (state) => {
-  console.log('mpstp = ', state);
-  return {
-    header: state.store,
-  };
-};
+let mapStateToProps = (state) => ({
+  header: state.store,
+});
 
 let mapDispatchToProps = (dispatch) => ({
   storeSettingsFetch: () => dispatch(storeActions.storeSettingsFetchRequest()),

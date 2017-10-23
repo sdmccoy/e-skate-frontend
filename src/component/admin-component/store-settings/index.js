@@ -147,7 +147,6 @@ let mapStateToProps = (state) => ({
 });
 
 let mapDispatchToProps = (dispatch) => ({
-  storeSettingsFetch: () => dispatch(storeActions.storeSettingsFetchRequest()),
   storeSettingsUpdate: (data) => dispatch(storeActions.storeUpdate(data)),
 });
 
