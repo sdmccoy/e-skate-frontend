@@ -1,8 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route, Link, Redirect} from 'react-router-dom';
+import './_admin_nav.scss';
 
 const AdminNav = props => (
-  <div className='navigation'>
+  <div className='navigation-admin'>
     <ul className='navigation-menu'>
       <li onClick={() => props.changeView('orders')}>Orders</li>
       <li onClick={() => props.changeView('items')}>Items</li>

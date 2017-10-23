@@ -1,14 +1,30 @@
 @import "../../../style/_main.scss";
 
-.admin-nav {
-  border: 1px solid black;
-  height: 55px;
-}
-
-.admin-nav-button {
-  display: inline-block;
-  width: 250px;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
+.navigation-admin {
+  width: 100%;
+  float: left;
+  display: block;
+  padding: 1% 0;
+  li {
+    text-align: center;
+    width: 20%;
+    margin: 2% calc(10%/4);
+    font-size: 1.5em;
+    border-right: 1px solid $color-border;
+    @media only screen and (max-width: 800px){
+      font-size: 1em;
+    }
+    @media only screen and (max-width: 520px){
+      font-size: 1em;
+      width: 40%;
+      margin: 2% calc(5%/2);
+    }
+    &:hover {
+      background-color: $color-hover;
+      border-radius: $pad;
+      a {
+        color: $color-font;
+      }
+    }
+  }
 }
