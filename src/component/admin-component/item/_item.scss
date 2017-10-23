@@ -1,12 +1,14 @@
 .item-plus-form {
   list-style: none;
+  width: 100%;
 
   .item {
-    width: 100%;
+    width: 80%;
     height: 200px;
-    margin: 0 0 35px 0;
+    margin: 1% 10%;
     padding: 0;
     border: 1px solid black;
+    border-radius: .5em;
     box-shadow: 3px 2px 1px #888;
 
     .image-container {
