@@ -380,6 +380,7 @@ main.frontend-main {
     border-radius: 0; }
   .board-items-container .app-bar {
     margin: 0.5em 0;
+    padding: 0 0 0 1.25%;
     background-color: #00BCD4;
     font-size: 3em;
     color: #FFF;
@@ -686,6 +687,7 @@ main.frontend-main {
     border-radius: 0; }
   .part-items-container .app-bar {
     margin: 0.5em 0;
+    padding: 0 0 0 1.25%;
     background-color: #00BCD4;
     font-size: 3em;
     color: #FFF;
